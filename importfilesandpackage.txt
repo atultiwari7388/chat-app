@@ -1,0 +1,30 @@
+How to create node.js web applications
+
+
+i). Import required models
+ii). Create Server
+iii). Read request and return response
+
+i). Import required models :- The first step is used to require directive to load http module and store returned HTTP instance into http variables.
+
+ex:- var http =required("http");
+
+ii). Create Server:- In the second step,yu have to create Server instance and then bind it at port 8081 using 'listen' method associated with server instance. Pass it a function with request and response parameters and write the sample implementation to return 'hello world'. for example
+
+
+http.createServer(function(request , response){
+   response.writeHead(200,{'console-Type:'text/plan'})
+   response.end('Hello World\n');
+}).listen(8081);
+
+console.log('server running at http:')
+
+
+iii). Combine (i) and (ii) step
+
+var http =require("http);
+http.createServer(function(request,response){
+   response.writeHead(200,{'console-Type:'Text/plan'})
+   response.end('Hello World\n');
+}).listen(8081);
+console.log('server running at http')
